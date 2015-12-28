@@ -3,11 +3,11 @@
 var assert = require('assert')
 var fs = require('fs')
 var clone = require('clone')
-var bitcoin = require('../')
+var paycoin = require('../')
 var config = require('./config')
 
 var getInfo = function (opts, cb) {
-  var client = new bitcoin.Client(opts)
+  var client = new paycoin.Client(opts)
   client.getInfo(cb)
 }
 

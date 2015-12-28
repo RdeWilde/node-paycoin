@@ -1,20 +1,20 @@
-# node-bitcoin changelog
+# node-paycoin changelog
 
 ## v3.0.1 (2015/10/25)
 * fix redefinition of already defined variable (does not actually affect behavior)
 
 ## v3.0.0 (2015/10/18)
 * make public domain license explicit
-* remove commands dropped in bitcoind v0.11
+* remove commands dropped in paycoind v0.11
   * `getHashesPerSecond`
   * `getHashesPerSec`
-* add missing commands for bitcoind v0.11
+* add missing commands for paycoind v0.11
   * `generate`
   * `verifyTxOutProof`
 
 ## v2.4.0 (2015/07/16)
 * don't lazy-load http/https modules
-* add command for bitcoind v0.11.0: `getTxOutProof`
+* add command for paycoind v0.11.0: `getTxOutProof`
 
 ## v2.3.2 (2015/06/26)
 * fix bug in test suite that was supposed to detect missing commands
@@ -23,20 +23,20 @@
   * `importWallet`
 
 ## v2.3.1 (2015/06/24)
-* add missing `getMempoolInfo` for bitcoind v0.10
+* add missing `getMempoolInfo` for paycoind v0.10
 
 ## v2.3.0 (2015/02/04)
 * drop node v0.8.x support
 * update testnet-box
 * update devDependencies
-* add commands for bitcoind v0.10
+* add commands for paycoind v0.10
   * `estimateFee`
   * `estimatePriority`
   * `getChainTips`
   * `importAddress`
 
 ## v2.2.0 (2014/08/29)
-* add commands for bitcoind v0.9.x
+* add commands for paycoind v0.9.x
   * `decodeScript`
   * `dumpWallet`
   * `getBestBlockHash`
@@ -69,10 +69,10 @@
   * `getMemoryPool`
   * `getMemorypool`
 * remove deprecated functionality
-  * creating `bitcoin.Client` with more than one argument
+  * creating `paycoin.Client` with more than one argument
 
 ## v1.7.0 (2013/05/05)
-* add missing commands from bitcoind v0.7.0
+* add missing commands from paycoind v0.7.0
   * `createMultiSig`
   * `getBlockTemplate`
   * `getTxOut`
@@ -93,12 +93,12 @@
 * drop node v0.6.x support
 * change test runner from `vows` to `mocha`
 * upgrade testnet-box
-* add commands for bitcoind v0.8.0
+* add commands for paycoind v0.8.0
   * `addNode`
   * `getAddedNodeInfo`
   * `listLockUnspent`
   * `lockUnspent`
-* deprecate creating `bitcoin.Client` with more than one argument
+* deprecate creating `paycoin.Client` with more than one argument
 * add SSL support
 
 ## v1.5.0 (2012/10/22)
@@ -107,7 +107,7 @@
 * add RPC call batching (multiple RPC calls within one HTTP request)
 
 ## v1.4.0 (2012/09/09)
-* add commands for bitcoind v0.7.0
+* add commands for paycoind v0.7.0
   * `createRawTransaction`
   * `decodeRawTransaction`
   * `getPeerInfo`
@@ -136,7 +136,7 @@ occur on the same command call.
 * err objects should all now be an instance of Error
 
 ## v1.1.6 (2012/04/11)
-* add commands for bitcoind v0.6.0
+* add commands for paycoind v0.6.0
   * `addMultiSigAddress` (only available in testnet)
   * `dumpPrivKey`
   * `getBlockHash`

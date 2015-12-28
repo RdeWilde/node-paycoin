@@ -12,7 +12,7 @@ services:
 
 before_script:
   - git submodule update --init
-  - docker build -t node-bitcoin .
+  - docker build -t node-paycoin .
 
 script:
-  - docker run node-bitcoin
+  - docker run node-paycoin

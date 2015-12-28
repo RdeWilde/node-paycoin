@@ -1,10 +1,10 @@
 {
-  "name": "bitcoin",
-  "description": "Communicate with bitcoind via JSON-RPC",
+  "name": "paycoin",
+  "description": "Communicate with paycoind via JSON-RPC",
   "version": "3.0.1",
   "main": "lib/index.js",
   "keywords": [
-    "bitcoin",
+    "paycoin",
     "rpc"
   ],
   "author": "Bill Casarin <bill@casarin.ca> (jb55.com)",
@@ -20,7 +20,7 @@
   "optionalDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/freewil/node-bitcoin.git"
+    "url": "git://github.com/freewil/node-paycoin.git"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -30,9 +30,9 @@
     "test": "make test"
   },
   "bugs": {
-    "url": "https://github.com/freewil/node-bitcoin/issues"
+    "url": "https://github.com/freewil/node-paycoin/issues"
   },
-  "homepage": "https://github.com/freewil/node-bitcoin#readme",
+  "homepage": "https://github.com/freewil/node-paycoin#readme",
   "directories": {
     "test": "test"
   },

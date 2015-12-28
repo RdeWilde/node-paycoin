@@ -3,7 +3,7 @@
 var assert = require('assert')
 var clone = require('clone')
 var http = require('http')
-var bitcoin = require('../')
+var paycoin = require('../')
 var config = require('./config')
 
 var test = {
@@ -11,7 +11,7 @@ var test = {
 }
 
 var makeClient = function makeClient () {
-  return new bitcoin.Client(config)
+  return new paycoin.Client(config)
 }
 
 var notEmpty = function notEmpty (data) {
@@ -122,7 +122,7 @@ describe('Client', function () {
     })
   })
 
-  it('bitcoin related error should be an Error object', function (done) {
+  it('paycoin related error should be an Error object', function (done) {
     var client = makeClient()
     client.cmd('nomethod', function (err, expectedValue) {
       assert.ok(err instanceof Error)
@@ -156,10 +156,10 @@ describe('Client', function () {
     var badCredentials = clone(config)
     badCredentials.user = 'baduser'
     badCredentials.pass = 'badpwd'
-    var client = new bitcoin.Client(badCredentials)
+    var client = new paycoin.Client(badCredentials)
 
     it('should still return client object', function (done) {
-      assert.ok(client instanceof bitcoin.Client)
+      assert.ok(client instanceof paycoin.Client)
       done()
     })
 
@@ -179,10 +179,10 @@ describe('Client', function () {
     badPort.port = 9897
     badPort.user = 'baduser'
     badPort.pass = 'badpwd'
-    var client = new bitcoin.Client(badPort)
+    var client = new paycoin.Client(badPort)
 
     it('will return client object', function (done) {
-      assert.ok(client instanceof bitcoin.Client)
+      assert.ok(client instanceof paycoin.Client)
       done()
     })
 
@@ -204,7 +204,7 @@ describe('Client', function () {
         request = req
         response = res
       })
-      var client = new bitcoin.Client({
+      var client = new paycoin.Client({
         host: 'localhost',
         port: 19998,
         user: 'admin1',
@@ -231,7 +231,7 @@ describe('Client', function () {
         request = req
         response = res
       })
-      var client = new bitcoin.Client({
+      var client = new paycoin.Client({
         host: 'localhost',
         port: 19999,
         user: 'admin1',
@@ -255,7 +255,7 @@ describe('Client', function () {
     var assertResHeaders = function (resHeaders) {
       assert.ok(resHeaders)
       assert.ok(resHeaders.server)
-      assert.ok(/bitcoin/.test(resHeaders.server))
+      assert.ok(/paycoin/.test(resHeaders.server))
     }
     it('should be returned for no parameter calls', function (done) {
       var client = makeClient()

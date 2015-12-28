@@ -27,7 +27,7 @@ start-ssl:
 	
 stop:
 	$(MAKE) -C $(BOX) stop
-	@while ps -C bitcoind > /dev/null; do sleep 1; done
+	@while ps -C paycoind > /dev/null; do sleep 1; done
 
 stop-ssl:
 	$(MAKE) -C $(BOX) stop B1_FLAGS=-rpcssl=1 B2_FLAGS=-rpcssl=1
