@@ -1,6 +1,6 @@
 # Dockerfile for running node-paycoin tests
-FROM freewil/paycoin-testnet-box
-MAINTAINER Sean Lavine <lavis88@gmail.com>
+FROM rdewilde/paycoin-testnet-box
+MAINTAINER Robert de Wilde <rdewildenl@gmail.com>
 
 # install node.js
 USER root
