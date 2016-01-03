@@ -4,7 +4,7 @@ MAINTAINER Robert de Wilde <rdewildenl@gmail.com>
 
 # install node.js
 USER root
-RUN apt-get install --yes curl
+RUN apt-get install --yes curl make
 RUN curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
 RUN apt-get install --yes nodejs
 
