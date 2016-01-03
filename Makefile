@@ -27,7 +27,6 @@ start-ssl:
 	
 stop:
 	$(MAKE) -C $(BOX) stop
-	sleep 10
 
 stop-ssl:
 	$(MAKE) -C $(BOX) stop B1_FLAGS=-rpcssl=1 B2_FLAGS=-rpcssl=1
