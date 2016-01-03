@@ -93,7 +93,10 @@ describe('Client', function () {
       var client = makeClient()
       client.getDifficulty(function (err, difficulty) {
         assert.ifError(err)
-        assert.ok(typeof difficulty === 'number')
+        notEmpty(difficulty)
+        assert.ok(difficulty)
+        assert.ok(typeof difficulty['proof-of-work'] === 'number')
+        assert.ok(typeof difficulty['proof-of-stake'] === 'number')
         done()
       })
     })
